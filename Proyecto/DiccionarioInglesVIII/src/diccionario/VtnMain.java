@@ -5,6 +5,10 @@
  */
 package diccionario;
 
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author david
@@ -27,14 +31,13 @@ public class VtnMain extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         jLTitulo = new javax.swing.JLabel();
         jLDes1 = new javax.swing.JLabel();
         jLDes2 = new javax.swing.JLabel();
         jLDes3 = new javax.swing.JLabel();
-        jBa = new javax.swing.JButton();
+        jba = new javax.swing.JButton();
         jBb = new javax.swing.JButton();
         jBc = new javax.swing.JButton();
         jBd = new javax.swing.JButton();
@@ -60,7 +63,17 @@ public class VtnMain extends javax.swing.JFrame
 
         jLDes3.setText("sus tiempos gramaticales.");
 
-        jBa.setText("A");
+        jba.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/a1.png"))); // NOI18N
+        jba.setMaximumSize(new java.awt.Dimension(45, 45));
+        jba.setPreferredSize(new java.awt.Dimension(45, 45));
+        jba.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jbaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jbaMouseExited(evt);
+            }
+        });
 
         jBb.setText("B");
 
@@ -94,11 +107,18 @@ public class VtnMain extends javax.swing.JFrame
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(69, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap(79, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLDes2)
+                        .addComponent(jLDes1)
+                        .addComponent(jLDes3)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(116, 116, 116)
+                            .addComponent(jLTitulo)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jBa)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jba, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jBb)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jBc)
@@ -113,14 +133,9 @@ public class VtnMain extends javax.swing.JFrame
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jBh)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jBi))
-                    .addComponent(jLDes2)
-                    .addComponent(jLDes1)
-                    .addComponent(jLDes3)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(116, 116, 116)
-                        .addComponent(jLTitulo)))
-                .addGap(44, 44, 44))
+                        .addComponent(jBi)
+                        .addGap(8, 8, 8)))
+                .addGap(89, 89, 89))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,28 +143,45 @@ public class VtnMain extends javax.swing.JFrame
                 .addGap(36, 36, 36)
                 .addComponent(jLTitulo)
                 .addGap(18, 18, 18)
-                .addComponent(jLDes1)
+                .addComponent(jLDes1, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLDes2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLDes3)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBa)
-                    .addComponent(jBb)
-                    .addComponent(jBc)
-                    .addComponent(jBd)
-                    .addComponent(jBe)
-                    .addComponent(jBf)
-                    .addComponent(jBg)
-                    .addComponent(jBh)
-                    .addComponent(jBi))
-                .addContainerGap(184, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jBb)
+                            .addComponent(jBc)
+                            .addComponent(jBd)
+                            .addComponent(jBe)
+                            .addComponent(jBf)
+                            .addComponent(jBg)
+                            .addComponent(jBh)
+                            .addComponent(jBi)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jba, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(223, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbaMouseEntered
+        ImageIcon icon = new ImageIcon("src/imagenes/a2.png");
+        Icon a = new ImageIcon(icon.getImage());
+        jba.setIcon(a);
+        
+    }//GEN-LAST:event_jbaMouseEntered
+
+    private void jbaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbaMouseExited
+        ImageIcon icon = new ImageIcon("src/imagenes/a1.png");
+        Icon a = new ImageIcon(icon.getImage());
+        jba.setIcon(a);
+    }//GEN-LAST:event_jbaMouseExited
 
     /**
      * @param args the command line arguments
@@ -197,7 +229,6 @@ public class VtnMain extends javax.swing.JFrame
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBa;
     private javax.swing.JButton jBb;
     private javax.swing.JButton jBc;
     private javax.swing.JButton jBd;
@@ -214,5 +245,6 @@ public class VtnMain extends javax.swing.JFrame
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JButton jba;
     // End of variables declaration//GEN-END:variables
 }
